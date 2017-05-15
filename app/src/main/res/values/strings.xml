@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Model</string>
+    <string name="login_id">ID</string>
+    <string name="password">パスワ一ド</string>
+    <string name="forgot_password">パスワ一 ドをお忘れの方</string>
+    <string name="next">次へ</string>
+    <string name="login_fail">パスワ_ド. ID が一致しません</string>
+    <string name="user_name">タップして編集</string>
+    <string name="please_enter">入力して〈ださい</string>
+    <string name="please_select">選択して〈ださい</string>
+    <string name="name">氏名</string>
+    <string name="gender">性 別</string>
+    <string name="height">身長</string>
+    <string name="weight">体重</string>
+    <string name="shoe_size">靴のサイズ</string>
+    <string name="clothes_size">服のサイズ</string>
+    <string name="job_web">【JOB】雑誌・WEBモデ`ル</string>
+    <string name="job_salon">【JOB】サ口ンモデ`ル</string>
+    <string name="job_tv">【JOB】テレビ 半日~</string>
+    <string name="magazine">私は雑誌でいうと...</string>
+    <string name="introduction">自円紹介</string>
+    <string name="example_job">例:5〇〇〇円~</string>
+</resources>

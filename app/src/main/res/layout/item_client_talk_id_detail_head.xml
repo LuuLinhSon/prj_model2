@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="@dimen/activity_fragment_margin_default"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/imgAvatar"
+        app:srcCompat="@drawable/round"
+        tools:ignore="ContentDescription"
+        android:layout_width="52dp"
+        android:layout_height="52dp"
+        android:adjustViewBounds="false"
+        android:background="@drawable/promo" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_fragment_margin_default"
+        android:orientation="vertical">
+
+        <TextView
+            tools:ignore="HardcodedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mao Inoue" />
+
+        <TextView
+            tools:ignore="HardcodedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5,000 followers" />
+
+        <TextView
+            tools:ignore="HardcodedText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Instagramを見る" />
+    </LinearLayout>
+
+</LinearLayout>

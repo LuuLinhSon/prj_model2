@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableRow
+        android:background="@color/colorGray"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:paddingLeft="@dimen/activity_fragment_margin_default"
+            android:text="お仕事" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginLeft="@dimen/activity_fragment_margin_default"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:minWidth="120dp"
+            android:paddingLeft="@dimen/table_layout_padding_row_double"
+            android:text="雑誌撮 影" />
+
+        <TextView android:text="20,000~" />
+    </TableRow>
+
+    <include layout="@layout/line_gray" />
+
+    <TableRow
+        android:layout_marginLeft="@dimen/activity_fragment_margin_default"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:paddingLeft="@dimen/table_layout_padding_row_double"
+            android:text="Instagram投 稿" />
+
+        <TextView android:text="5,000~" />
+    </TableRow>
+
+
+    <TableRow
+        android:layout_marginLeft="@dimen/activity_fragment_margin_default"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:paddingLeft="@dimen/table_layout_padding_row_double"
+            android:text="テレビ" />
+
+        <TextView android:text="30,000~" />
+    </TableRow>
+</TableLayout>

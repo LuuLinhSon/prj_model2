@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TableRow
+        android:background="@color/colorGray"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:paddingLeft="@dimen/activity_fragment_margin_default"
+            android:text="About" />
+    </TableRow>
+
+    <TableRow
+        android:layout_marginLeft="@dimen/activity_fragment_margin_default"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:minWidth="110dp"
+            android:paddingLeft="@dimen/table_layout_padding_row_double"
+            android:text="性 別" />
+
+        <TextView android:text="女 性" />
+    </TableRow>
+
+    <include layout="@layout/line_gray" />
+
+    <TableRow
+        android:layout_marginLeft="@dimen/activity_fragment_margin_default"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:paddingLeft="@dimen/table_layout_padding_row_double"
+            android:text="身長" />
+
+        <TextView android:text="168cm" />
+    </TableRow>
+
+    <include layout="@layout/line_gray" />
+
+    <TableRow
+        android:layout_marginLeft="@dimen/activity_fragment_margin_default"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:paddingLeft="@dimen/table_layout_padding_row_double"
+            android:text="体重" />
+
+        <TextView android:text="44kg" />
+    </TableRow>
+
+    <include layout="@layout/line_gray" />
+
+    <TableRow
+        android:layout_marginLeft="@dimen/activity_fragment_margin_default"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:paddingLeft="@dimen/table_layout_padding_row_double"
+            android:text="パス卜" />
+
+        <TextView android:text="80cm" />
+    </TableRow>
+
+    <include layout="@layout/line_gray" />
+
+    <TableRow
+        android:layout_marginLeft="@dimen/activity_fragment_margin_default"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:paddingLeft="@dimen/table_layout_padding_row_double"
+            android:text="ウ工ス卜" />
+
+        <TextView android:text="60cm" />
+    </TableRow>
+
+    <include layout="@layout/line_gray" />
+
+    <TableRow
+        android:layout_marginLeft="@dimen/activity_fragment_margin_default"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:paddingLeft="@dimen/table_layout_padding_row_double"
+            android:text="ヒツプ" />
+
+        <TextView android:text="80cm" />
+    </TableRow>
+
+    <include layout="@layout/line_gray" />
+
+    <TableRow
+        android:layout_marginLeft="@dimen/activity_fragment_margin_default"
+        android:padding="@dimen/table_layout_padding_row">
+
+        <TextView
+            android:paddingLeft="@dimen/table_layout_padding_row_double"
+            android:text="服のサイズ" />
+
+        <TextView android:text="36" />
+    </TableRow>
+</TableLayout>
