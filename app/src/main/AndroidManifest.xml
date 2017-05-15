@@ -38,6 +38,10 @@
             android:theme="@style/Theme.AppCompat.Light.Dialog"
             >
         </activity>
+        <activity android:name=".View.Popup.PopupAvatar"
+            android:theme="@style/Theme.AppCompat.Light.Dialog"
+            >
+        </activity>
     </application>
 
 </manifest>

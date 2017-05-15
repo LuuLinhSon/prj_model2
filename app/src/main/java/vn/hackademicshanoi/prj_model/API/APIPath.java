@@ -5,6 +5,6 @@ package vn.hackademicshanoi.prj_model.API;
  */
 
 public class APIPath {
-
-    public static final String SERVER_API = "";
+    public static final String LOGIN_MANAGER_API = "";
+    public static final String GET_PROFILE_API = "";
 }

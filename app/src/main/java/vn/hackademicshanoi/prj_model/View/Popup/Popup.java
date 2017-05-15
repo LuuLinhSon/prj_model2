@@ -21,8 +21,9 @@ import vn.hackademicshanoi.prj_model.R;
  */
 
 public class Popup extends AppCompatActivity {
-
-    ListView lvPopup;
+     ListView lvPopup;
+     ArrayList<String> arr;
+     String title;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -32,8 +33,24 @@ public class Popup extends AppCompatActivity {
         lvPopup = (ListView) findViewById(R.id.lvPopup);
 
         Intent intent = getIntent();
-        final ArrayList<String> arr = intent.getStringArrayListExtra("listgender");
-        final String title = intent.getStringExtra("gender");
+        String token = intent.getStringExtra("token");
+        if(token.equals("1")){
+            arr = intent.getStringArrayListExtra("listgender");
+            title = intent.getStringExtra("gender");
+        }else if(token.equals("2")){
+            arr = intent.getStringArrayListExtra("listheight");
+            title = intent.getStringExtra("height");
+        }else if(token.equals("3")){
+            arr = intent.getStringArrayListExtra("listweight");
+            title = intent.getStringExtra("weight");
+        }else if(token.equals("4")){
+            arr = intent.getStringArrayListExtra("listsizeshoe");
+            title = intent.getStringExtra("sizeshoe");
+        }else if(token.equals("5")){
+            arr = intent.getStringArrayListExtra("listsizeclothes");
+            title = intent.getStringExtra("sizeclothes");
+        }
+
 
         setTitle(title);
 
@@ -48,6 +65,10 @@ public class Popup extends AppCompatActivity {
 
                 Intent iFPO = new Intent();
                 iFPO.putExtra("gender",s);
+                iFPO.putExtra("height",s);
+                iFPO.putExtra("weight",s);
+                iFPO.putExtra("sizeshoe",s);
+                iFPO.putExtra("sizeclothes",s);
                 setResult(Activity.RESULT_OK,iFPO);
                 finish();
             }

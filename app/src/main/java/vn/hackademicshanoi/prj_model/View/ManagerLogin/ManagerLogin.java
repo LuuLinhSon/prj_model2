@@ -9,14 +9,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import vn.hackademicshanoi.prj_model.Model.ModelLogIn;
 import vn.hackademicshanoi.prj_model.R;
 import vn.hackademicshanoi.prj_model.View.BeforeLogin.BeforeLoginActivity;
 import vn.hackademicshanoi.prj_model.View.MainActivity.MainActivity;

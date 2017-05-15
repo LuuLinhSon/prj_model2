@@ -1,4 +1,4 @@
-package vn.hackademicshanoi.prj_model.Model;
+package vn.hackademicshanoi.prj_model.Model.Login;
 
 import android.content.Context;
 
@@ -19,7 +19,7 @@ public class ModelLogIn {
 
         boolean kiemtra = false;
 
-        String linkURL = APIPath.SERVER_API;
+        String linkURL = APIPath.LOGIN_MANAGER_API;
 
         JSONObject jInfoUser = new JSONObject();
         try {
