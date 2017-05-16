@@ -49,6 +49,9 @@ public class Popup extends AppCompatActivity {
         }else if(token.equals("5")){
             arr = intent.getStringArrayListExtra("listsizeclothes");
             title = intent.getStringExtra("sizeclothes");
+        }else if(token.equals("8")){
+            arr = intent.getStringArrayListExtra("arrmagazine");
+            title = intent.getStringExtra("magazine");
         }
 
 
@@ -69,6 +72,7 @@ public class Popup extends AppCompatActivity {
                 iFPO.putExtra("weight",s);
                 iFPO.putExtra("sizeshoe",s);
                 iFPO.putExtra("sizeclothes",s);
+                iFPO.putExtra("magazine",s);
                 setResult(Activity.RESULT_OK,iFPO);
                 finish();
             }

@@ -126,6 +126,9 @@ public class FragmentProfileOne extends Fragment implements View.OnClickListener
                     FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                     FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                     FragmentProfileTwo fragmentProfileTwo = new FragmentProfileTwo();
+                    Bundle bundle = new Bundle();
+                    bundle.putStringArrayList("arrmagazine",arrMagazine);
+                    fragmentProfileTwo.setArguments(bundle);
                     fragmentTransaction.addToBackStack("BeforeLoginActivity");
                     fragmentTransaction.add(R.id.content,fragmentProfileTwo);
                     fragmentTransaction.commit();

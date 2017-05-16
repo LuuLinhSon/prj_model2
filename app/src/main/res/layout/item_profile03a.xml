@@ -5,14 +5,18 @@
     android:padding="8dp">
 
     <ImageView
+        android:id="@+id/imImage"
         android:layout_width="180dp"
         android:layout_height="220dp"
-        android:src="@drawable/promo"
+        android:src="@mipmap/frame_photo_d"
         android:scaleType="fitXY"/>
 
     <ImageView
+        android:id="@+id/imDelete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:src="@mipmap/bt_remove_photo" />
+        android:src="@mipmap/bt_remove_photo"
+        android:visibility="gone"
+        />
 </FrameLayout>

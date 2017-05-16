@@ -47,7 +47,7 @@
                             android:scaleType="fitXY"/>
 
                         <TextView
-                            android:id="@+id/fragment_profile_one_back"
+                            android:id="@+id/fragment_profile_two_back"
                             android:layout_centerHorizontal="true"
                             android:layout_centerVertical="true"
                             android:layout_width="wrap_content"
@@ -58,7 +58,7 @@
                     </LinearLayout>
 
                     <TextView
-                        android:id="@+id/fragment_profile_one_title"
+                        android:id="@+id/fragment_profile_two_title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="プ口フイ一ル登録(2/3)"
@@ -70,7 +70,7 @@
                         />
 
                     <TextView
-                        android:id="@+id/fragment_profile_one_next"
+                        android:id="@+id/fragment_profile_two_next"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="次へ"
