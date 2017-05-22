@@ -16,7 +16,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"
-        android:src="@mipmap/bt_remove_photo"
-        android:visibility="gone"
+        android:visibility="visible"
         />
 </FrameLayout>

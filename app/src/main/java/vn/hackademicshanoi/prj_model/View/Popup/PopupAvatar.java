@@ -93,7 +93,7 @@ public class PopupAvatar extends AppCompatActivity {
                     setResult(Activity.RESULT_OK,iCamera);
                     finish();
 
-                } catch (FileNotFoundException e) {
+                }catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
 

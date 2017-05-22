@@ -31,6 +31,7 @@
                 android:scaleType="fitXY"/>
 
             <TextView
+                android:id="@+id/fragment_profile_three_back"
                 android:layout_centerHorizontal="true"
                 android:layout_centerVertical="true"
                 android:layout_width="wrap_content"
@@ -80,15 +81,15 @@
         android:text="PR写真アツプ口 一 ド (3枚以上)"
         android:textSize="20sp" />
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/rycyclerImage"
+
+    <GridView
+        android:id="@+id/gridImage"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="@dimen/activity_fragment_margin_default"
         android:layout_marginRight="@dimen/activity_fragment_margin_default"
-        app:layoutManager="android.support.v7.widget.GridLayoutManager"
-        app:spanCount="2"
-        tools:listitem="@layout/item_profile03a">
-
-    </android.support.v7.widget.RecyclerView>
+        android:numColumns="2"
+        tools:listitem="@layout/item_profile03a"
+        >
+    </GridView>
 </LinearLayout>

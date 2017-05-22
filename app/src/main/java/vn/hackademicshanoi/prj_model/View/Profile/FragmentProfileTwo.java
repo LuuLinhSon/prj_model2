@@ -1,7 +1,9 @@
 package vn.hackademicshanoi.prj_model.View.Profile;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -27,8 +29,10 @@ public class FragmentProfileTwo extends Fragment implements View.OnClickListener
 
     ArrayList<String> arrMagazine;
     EditText edWeb,edSalon,edTv,edIntro;
-    TextView tvMagazine,tvNext;
+    TextView tvMagazine,tvNext,tvBack;
     public static final int REQUES_CODE_MAGAZINE_TWO = 9999;
+    SharedPreferences sharedPreferences;
+    SharedPreferences.Editor editor;
 
     @Nullable
     @Override
@@ -41,13 +45,28 @@ public class FragmentProfileTwo extends Fragment implements View.OnClickListener
         edIntro = (EditText) view.findViewById(R.id.fragment_profile_two_introduction);
         tvMagazine = (TextView) view .findViewById(R.id.fragment_profile_two_magazine);
         tvNext = (TextView) view.findViewById(R.id.fragment_profile_two_next);
+        tvBack = (TextView) view.findViewById(R.id.fragment_profile_two_back);
 
+        sharedPreferences = getContext().getSharedPreferences("profileone", Context.MODE_PRIVATE);
+        editor = sharedPreferences.edit();
+
+        edWeb.setText(sharedPreferences.getString("web",""));
+        edSalon.setText(sharedPreferences.getString("salon",""));
+        edTv.setText(sharedPreferences.getString("tv",""));
+        tvMagazine.setText(sharedPreferences.getString("magazine",""));
+        edIntro.setText(sharedPreferences.getString("intro",""));
 
         tvMagazine.setOnClickListener(this);
         tvNext.setOnClickListener(this);
+        tvBack.setOnClickListener(this);
 
+    // Nhận dữ liệu dưới dạng bundle được gửi sang từ fragment_profile_one
         Bundle bundle = getArguments();
-        arrMagazine = bundle.getStringArrayList("arrmagazine");
+        try {
+            arrMagazine = bundle.getStringArrayList("arrmagazine");
+        }catch (NullPointerException e){
+
+        }
 
         return view;
     }
@@ -64,15 +83,28 @@ public class FragmentProfileTwo extends Fragment implements View.OnClickListener
                 startActivityForResult(iMagazinePopup,REQUES_CODE_MAGAZINE_TWO);
                 break;
             case R.id.fragment_profile_two_next:
+                String web = edWeb.getText().toString();
+                String salon = edSalon.getText().toString();
+                String tv = edSalon.getText().toString();
+                String intro = edIntro.getText().toString();
+                //Lưu lại dữ liệu các trường vào sharepreference để không bị mất dữ liệu khi back lại
+                editor.putString("web",web);
+                editor.putString("salon",salon);
+                editor.putString("tv",tv);
+                editor.putString("intro",intro);
+                editor.commit();
                 FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
                 FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
                 FragmentProfileThree fragmentProfileThree = new FragmentProfileThree();
-//                Bundle bundle = new Bundle();
-//                bundle.putStringArrayList("arrmagazine",arrMagazine);
-//                fragmentProfileTwo.setArguments(bundle);
-                fragmentTransaction.addToBackStack("BeforeLoginActivity");
                 fragmentTransaction.add(R.id.content,fragmentProfileThree);
                 fragmentTransaction.commit();
+                break;
+            case R.id.fragment_profile_two_back:
+                FragmentManager fragmentManager2 = getActivity().getSupportFragmentManager();
+                FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
+                FragmentProfileOne fragmentProfileOne = new FragmentProfileOne();
+                fragmentTransaction2.add(R.id.content,fragmentProfileOne);
+                fragmentTransaction2.commit();
                 break;
         }
     }
@@ -85,6 +117,8 @@ public class FragmentProfileTwo extends Fragment implements View.OnClickListener
                 Intent result = data;
                 String magazine = result.getStringExtra("magazine");
                 tvMagazine.setText(magazine);
+                editor.putString("magazine",magazine);
+                editor.commit();
             }
         }
     }

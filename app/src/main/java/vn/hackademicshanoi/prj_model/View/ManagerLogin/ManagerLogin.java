@@ -115,7 +115,8 @@ public class ManagerLogin extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.fragment_login_manager_bt_login:
                 Intent iHome = new Intent(this, MainActivity.class);
-                        startActivity(iHome);
+                startActivity(iHome);
+                break;
 //                if(checkConnectionNetword()){
 //                    String idManager = edID.getText().toString();
 //                    String passWord = edPassword.getText().toString();
